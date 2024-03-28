@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  transition: background-color 1s;
+}
+
+.axolotl {
+  color: #00FF00;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+button {
+  background: #00FF00;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 5s;
+}
+
+.blue-border {
+  border: 10px solid #0077FF;
+}
+
+.red-border {
+  border: 10px solid #FF0000;
+}
