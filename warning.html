@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Page</title>
+
+  <style>
+     body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .warning-container {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #FF6347;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: blue;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        p {
+            color: green;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #FF0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: not-allowed;
+        }
+
+        button:hover {
+            background-color: #FF4500;
+        }
+    
+  </style>
+</head>
+
+<body>
+    <div class="warning-container">
+        <h1>Warning!</h1>
+        <p>By using this Anti Go-Guardian App, the user acknowledges full responsibility for its usage and any consequences thereof. The user agrees not to abuse this tool or its capabilities in any way.</p>
+        <button disabled>OK (10s)</button>
+    </div>
+
+    <script>
+       const button = document.querySelector('button');
+        let timer = 10;
+
+        const countdownTimer = setInterval(function() {
+            timer--;
+            button.innerText = `OK (${timer}s)`;
+            if (timer == 0) {
+                clearInterval(countdownTimer);
+                button.disabled = false;
+                button.style.cursor = 'pointer';
+                button.innerText = 'OK';
+            }
+        }, 1000);
+
+        button.addEventListener('click', function () {
+            alert('You have acknowledged the warning. Proceed with caution.');
+        });
+    
+    </script>    
+</body>
+
+</html>
