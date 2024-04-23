@@ -1,4 +1,4 @@
-    body {
+body {
         background-color: black;
         color: white;
         display: flex;
@@ -9,6 +9,7 @@
     }
     .logo {
         display: none;
+        font-size: 2rem;
     }
     .fade-in {
         animation: fadeIn 2s forwards;
