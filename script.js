@@ -1,18 +1,41 @@
-let isBlue = true;
+ const productionLogo = document.getElementById('productionLogo');
+    const vanityCard = document.getElementById('vanityCard');
+    const vanityPlate = document.getElementById('vanityPlate');
+    const anotherLogo = document.getElementById('anotherLogo');
 
-function toggleProxy() {
-  document.body.classList.toggle('blue-border', isBlue);
-  document.body.classList.toggle('red-border', !isBlue);
-  isBlue = !isBlue;
-}
+    setTimeout(() => {
+        productionLogo.classList.add('fade-in');
+        setTimeout(() => {
+            productionLogo.classList.add('fade-out');
+            setTimeout(() => {
+                productionLogo.style.display = 'none';
 
-let variable = false; //false if page rediredcts, true if page dosnt.
+                vanityCard.style.display = 'block';
+                vanityCard.classList.add('fade-in');
+                setTimeout(() => {
+                    vanityCard.classList.add('fade-out');
+                    setTimeout(() => {
+                        vanityCard.style.display = 'none';
 
-    if (!variable) {
-      window.location.href = 'https://wattle.vercel.app/warning.html';
-    }
+                        vanityPlate.style.display = 'block';
+                        vanityPlate.classList.add('fade-in');
+                        setTimeout(() => {
+                            vanityPlate.classList.add('fade-out');
+                            setTimeout(() => {
+                                vanityPlate.style.display = 'none';
 
-    document.getElementById('changeVariableBtn').addEventListener('click', function() {
-      variable = true;
-    });
-  
+                                anotherLogo.style.display = 'block';
+                                anotherLogo.classList.add('fade-in');
+                                setTimeout(() => {
+                                    anotherLogo.classList.add('fade-out');
+                                    setTimeout(() => {
+                                        anotherLogo.style.display = 'none';
+                                    }, 2000);
+                                }, 5000);
+                            }, 2000);
+                        }, 5000);
+                    }, 2000);
+                }, 5000);
+            }, 2000);
+        }, 5000);
+    }, 1000);
